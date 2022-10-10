@@ -14,6 +14,7 @@ namespace Unity.FPS.UI
         public float DistanceMinScale = 50f;
         public float CompasMarginRatio = 0.8f;
 
+
         public GameObject MarkerDirectionPrefab;
 
         Transform m_PlayerTransform;
