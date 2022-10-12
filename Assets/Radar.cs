@@ -27,12 +27,15 @@ public class Radar : MonoBehaviour
         {
             if (Vector3.Distance(Radarobjects[i].transform.position,transform.position)> switchDistance)
             {
-                helpTransform.LookAt(Radarobjects[i]);
-                borderObjects[i].transform.position = transform.position * switchDistance*helpTransform.forward;
+                helpTransform.LookAt(Radarobjects[i].transform);
+                borderObjects[i].transform.position = transform.position+switchDistance*helpTransform.forward;
+                borderObjects[i].layer = LayerMask.NameToLayer("Radar");
+                Radarobjects[i].layer = LayerMask.NameToLayer("Invisible");
             }
             else
             {
-
+                borderObjects[i].layer = LayerMask.NameToLayer("Invisible");
+                Radarobjects[i].layer = LayerMask.NameToLayer("Radar");
             }
         }
     }
@@ -40,7 +43,8 @@ public class Radar : MonoBehaviour
     void createRadarobject()
     {
         Radarobjects = new List<GameObject>();
-        foreach(GameObject o in Trackedobjects)
+        borderObjects = new List<GameObject>();
+        foreach (GameObject o in Trackedobjects)
         {
             GameObject k = Instantiate(Radarprefab, o.transform.position, Quaternion.identity) as GameObject;
             Radarobjects.Add(k);
