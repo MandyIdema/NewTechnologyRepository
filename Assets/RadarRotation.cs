@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RadarRotation : MonoBehaviour
 {
+   
     public List<GameObject> RadarObjects;
     public GameObject Radarprefab;
     public GameObject[] Trackedobjects;
@@ -19,7 +20,7 @@ public class RadarRotation : MonoBehaviour
     {
         CreatetrackedObjects();
 
-        //Rotation speed is set to 180f on awake
+        
         rotationSpeed = 180f;
         radarRange = 50f;
 
@@ -35,6 +36,8 @@ public class RadarRotation : MonoBehaviour
  
     }
 
+    //This function creates a child object on the object that you want to display on the radar
+    //The child object follows the position of the tracked object and will only be displayed on the radar camera
     void CreatetrackedObjects()
     {
         //Create a new list of gameobjects added to radarobjects
@@ -53,4 +56,5 @@ public class RadarRotation : MonoBehaviour
 
         }
     }
+
 }
