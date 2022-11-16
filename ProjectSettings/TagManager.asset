@@ -7,6 +7,7 @@ TagManager:
   - turret
   - hoverbot
   - enemytrackingpoint
+  - Line
   layers:
   - Default
   - TransparentFX

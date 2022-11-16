@@ -5,7 +5,7 @@ using UnityEngine;
 public class RadarRotation : MonoBehaviour
 {
    
-    public List<GameObject> RadarObjects;
+    public static List<GameObject> RadarObjects;
     public GameObject Radarprefab;
     public GameObject[] Trackedobjects;
     public Transform parent_turrent;

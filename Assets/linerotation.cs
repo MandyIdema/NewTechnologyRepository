@@ -8,12 +8,14 @@ public class linerotation : MonoBehaviour
     public GameObject enemytrackingpoint;
     private float rotationSpeed;
 
+    
+
 
     // Start is called before the first frame update
     void Awake()
     {
         rotationSpeed = 180f;
-        enemytrackingpoint.gameObject.GetComponent<Renderer>().enabled = false;
+
 
     }
 
@@ -30,17 +32,13 @@ public class linerotation : MonoBehaviour
         if (other.gameObject.tag == "enemytrackingpoint")
         {
             {
-                other.gameObject.GetComponent<Renderer>().enabled = true;
+                fadeobject1.Fadein = true;
                 Debug.Log("Enemy detected");
-                StartCoroutine(Fade());
+                
+                
             }
         }
     }
 
-    private IEnumerator Fade()
-    {
-        yield return new WaitForSeconds(1f);
-        enemytrackingpoint.gameObject.GetComponent<Renderer>().enabled = false;
 
-    }
 }

@@ -3,7 +3,10 @@ guid: fd3796c5853685c488e1320cd6653fef
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - linerotationtype: {fileID: 2840552289084478878, guid: 8f54e07c36c7fb14bbdeedecbf3c4904,
+      type: 3}
+  - EnemyMaterial: {fileID: 2100000, guid: 6487fdefd669d4dbc91709a177cd4b93, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
